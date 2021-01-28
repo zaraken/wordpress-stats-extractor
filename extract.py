@@ -200,7 +200,10 @@ def merge_csv_files(domain, download_path, stat_pages, from_date, to_date):
         for fname in glob.glob(glob_str):
             # parse date from filename
             date = fname[-14:-4].split('_')
-            date = '-'.join(reversed(date))
+            # N.B. Not sure how the date format in the downloaded filename
+            # is determined (client or server) but it looks like it is the shitty
+            # US format as of the last time I ran the script ...
+            date = f'{date[2]}-{date[0]}-{date[1]}'
 
             # open file and read out values
             # we expect two columns per row
