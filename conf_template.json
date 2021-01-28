@@ -1,0 +1,13 @@
+{
+    "username": "your_user",
+    "password": "your_pass",
+    "domain": "your_domain",
+    "stat-pages": ["posts", "referrers", "countryviews",
+        "clicks", "authors", "searchterms"],
+    "from-date": "2021-01-01",
+    "to-date": "2021-01-02",
+    "out-path": "./stats/",
+    "browser": "",
+    "webdriver": "chrome",
+    "headless": false
+}
